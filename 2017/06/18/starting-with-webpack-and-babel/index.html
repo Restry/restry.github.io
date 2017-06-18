@@ -96,13 +96,13 @@
 <meta name="description" content="文章开始前默认大家已经装好nodejs和喜欢的编辑器（推荐visual studio code，很强大哦），并且了解基本的包管理器使用方法 注：包管理器个人比较偏爱yarn，用npm的同学可以执行npm i yarn -g 来全局添加，linux、mac下记得sudo 目录结构基础示例结构，可以自行按照爱好整理 12345678910111213- webapp    - src">
 <meta name="keywords" content="Testing,Another Tag">
 <meta property="og:type" content="article">
-<meta property="og:title" content="一步一步搭建Webpack+Babel环境">
+<meta property="og:title" content="一步一步搭建Webpack+Babel环境【编写中】">
 <meta property="og:url" content="http://yoursite.com/2017/06/18/starting-with-webpack-and-babel/index.html">
 <meta property="og:site_name" content="Vol">
 <meta property="og:description" content="文章开始前默认大家已经装好nodejs和喜欢的编辑器（推荐visual studio code，很强大哦），并且了解基本的包管理器使用方法 注：包管理器个人比较偏爱yarn，用npm的同学可以执行npm i yarn -g 来全局添加，linux、mac下记得sudo 目录结构基础示例结构，可以自行按照爱好整理 12345678910111213- webapp    - src">
-<meta property="og:updated_time" content="2017-06-18T16:42:19.000Z">
+<meta property="og:updated_time" content="2017-06-18T16:44:44.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="一步一步搭建Webpack+Babel环境">
+<meta name="twitter:title" content="一步一步搭建Webpack+Babel环境【编写中】">
 <meta name="twitter:description" content="文章开始前默认大家已经装好nodejs和喜欢的编辑器（推荐visual studio code，很强大哦），并且了解基本的包管理器使用方法 注：包管理器个人比较偏爱yarn，用npm的同学可以执行npm i yarn -g 来全局添加，linux、mac下记得sudo 目录结构基础示例结构，可以自行按照爱好整理 12345678910111213- webapp    - src">
 
 
@@ -137,7 +137,7 @@
 
 
 
-  <title>一步一步搭建Webpack+Babel环境 | Vol</title>
+  <title>一步一步搭建Webpack+Babel环境【编写中】 | Vol</title>
   
 
 
@@ -283,7 +283,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">一步一步搭建Webpack+Babel环境</h1>
+          <h1 class="post-title" itemprop="name headline">一步一步搭建Webpack+Babel环境【编写中】</h1>
         
 
         <div class="post-meta">
@@ -345,7 +345,8 @@
 <p>先添加依赖</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">yarn add babel-preset-env</div></pre></td></tr></table></figure>
 <p>修改.babelrc<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">  &quot;presets&quot;: [&quot;env&quot;]</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-
+<h2 id="package-json"><a href="#package-json" class="headerlink" title="package.json"></a>package.json</h2><p>到最后，添加一个build脚本 </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">  &quot;name&quot;: &quot;tumblr&quot;,</div><div class="line">  &quot;version&quot;: &quot;1.0.0&quot;,</div><div class="line">  &quot;description&quot;: &quot;&quot;,</div><div class="line">  &quot;main&quot;: &quot;index.js&quot;,</div><div class="line">  &quot;scripts&quot;: &#123;</div><div class="line">    &quot;build&quot;: &quot;webpack --config webpack.config.js --progress --colors&quot;,</div><div class="line">    &quot;test&quot;: &quot;echo \&quot;Error: no test specified\&quot; &amp;&amp; exit 1&quot;</div><div class="line">  &#125;,</div><div class="line">  &quot;keywords&quot;: [],</div><div class="line">  &quot;author&quot;: &quot;&quot;,</div><div class="line">  &quot;license&quot;: &quot;ISC&quot;,</div><div class="line">  &quot;dependencies&quot;: &#123;</div><div class="line">    &quot;babel-core&quot;: &quot;^6.25.0&quot;,</div><div class="line">    &quot;babel-loader&quot;: &quot;^7.0.0&quot;,</div><div class="line">    &quot;babel-preset-env&quot;: &quot;^1.5.2&quot;,</div><div class="line">    &quot;tumblr.js&quot;: &quot;^1.1.1&quot;,</div><div class="line">    &quot;webpack&quot;: &quot;^2.6.1&quot;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
       
     </div>
 
@@ -555,7 +556,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#目录结构"><span class="nav-number">1.</span> <span class="nav-text">目录结构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Webpack-设置"><span class="nav-number">2.</span> <span class="nav-text">Webpack 设置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#初始化"><span class="nav-number">2.1.</span> <span class="nav-text">初始化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#下载依赖包"><span class="nav-number">2.2.</span> <span class="nav-text">下载依赖包</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#更新webpack-config-js"><span class="nav-number">2.3.</span> <span class="nav-text">更新webpack.config.js</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Babel-设置"><span class="nav-number">3.</span> <span class="nav-text">Babel 设置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#添加必要依赖"><span class="nav-number">3.1.</span> <span class="nav-text">添加必要依赖</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#修改webpack-config-js"><span class="nav-number">3.2.</span> <span class="nav-text">修改webpack.config.js</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#修改-babelrc文件"><span class="nav-number">3.3.</span> <span class="nav-text">修改.babelrc文件</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#目录结构"><span class="nav-number">1.</span> <span class="nav-text">目录结构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Webpack-设置"><span class="nav-number">2.</span> <span class="nav-text">Webpack 设置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#初始化"><span class="nav-number">2.1.</span> <span class="nav-text">初始化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#下载依赖包"><span class="nav-number">2.2.</span> <span class="nav-text">下载依赖包</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#更新webpack-config-js"><span class="nav-number">2.3.</span> <span class="nav-text">更新webpack.config.js</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Babel-设置"><span class="nav-number">3.</span> <span class="nav-text">Babel 设置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#添加必要依赖"><span class="nav-number">3.1.</span> <span class="nav-text">添加必要依赖</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#修改webpack-config-js"><span class="nav-number">3.2.</span> <span class="nav-text">修改webpack.config.js</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#修改-babelrc文件"><span class="nav-number">3.3.</span> <span class="nav-text">修改.babelrc文件</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#package-json"><span class="nav-number">4.</span> <span class="nav-text">package.json</span></a></li></ol></div>
             
 
           </div>
